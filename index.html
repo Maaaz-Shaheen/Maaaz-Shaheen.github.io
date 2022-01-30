@@ -13,9 +13,9 @@
 	</head>
 	<body>
 		<div id="content-wrapper">
-			<header class="header header--bg">
-				<div class="container">
-					<nav class="navbar">
+			<header class="header header--bg" id="home">
+				<nav class="navbar">
+					<div class="container">
 						<div class="navbar-header">
 							<button
 								type="button"
@@ -40,8 +40,10 @@
 								<li><a href="#contact">CONTACT</a></li>
 							</ul>
 						</div>
-					</nav>
-					<div class="header__content text-center" id="home">
+					</div>
+				</nav>
+				<div class="container">
+					<div class="header__content text-center">
 						<span class="header__content__block">HELLO</span>
 						<h1 class="header__content__title">I'M MAAAZ A. SHAHEEN</h1>
 						<ul class="header__content__sub-title">
@@ -66,8 +68,8 @@
 					</div> -->
 				</div>
 			</header>
-
-			<section class="about" id="about">
+			<a name="about"></a>
+			<section class="about">
 				<div class="container about__container--narrow">
 					<div class="page-section">
 						<h2 class="page-section__title">ABOUT ME</h2>
@@ -83,7 +85,11 @@
 						<div class="row gutters-80">
 							<div class="col-md-4">
 								<div class="about__image">
-									<img src="assets/images/about-me-image.png" alt="" />
+									<img
+										src="assets/images/about-me-image.png"
+										width="100%"
+										alt=""
+									/>
 								</div>
 							</div>
 							<div class="col-md-8 about__content">
@@ -118,8 +124,11 @@
 										>
 									</div>
 									<div class="col-md-4">
-										<a class="button button--colorful button--margin" href="#"
-											>MY LINKEDIN</a
+										<a
+											class="button button--colorful button--margin"
+											href="https://github.com/Maaaz-Shaheen"
+											target="_blank"
+											><i class="fab fa-github"></i> &nbsp; MY GITHUB</a
 										>
 									</div>
 								</div>
@@ -1285,17 +1294,17 @@
 					<div class="social-icon">
 						<ul>
 							<li>
-								<a href="#">
+								<a href="https://www.linkedin.com/in/maaazshaheen/" target="_blank">
 									<i class="fab fa-linkedin-in"></i>
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="https://twitter.com/maaazarshad" target="_blank">
 									<i class="fab fa-twitter"></i>
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="https://github.com/Maaaz-Shaheen" target="_blank">
 									<i class="fab fa-github"></i>
 								</a>
 							</li>
@@ -1312,9 +1321,9 @@
 		<script src="js/mixitup.js"></script>
 
 		<script>
-			$("a").click(function (e) {
-				e.preventDefault();
-			});
+			// $("a").click(function (e) {
+			// 	e.preventDefault();
+			// });
 
 			// calling mixitup
 			var mixer = mixitup(".portfolio");
