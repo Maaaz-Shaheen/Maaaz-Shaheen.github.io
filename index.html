@@ -68,7 +68,7 @@
 					</div> -->
 				</div>
 			</header>
-			<a name="about"></a>
+			<a id="about"></a>
 			<section class="about">
 				<div class="container about__container--narrow">
 					<div class="page-section">
@@ -119,7 +119,9 @@
 								</div>
 								<div class="row">
 									<div class="col-md-4">
-										<a class="button button--colorful button--margin" href="#"
+										<a
+											class="button button--colorful button--margin"
+											href="/assets/downloads/CV.pdf"
 											>DOWNLOAD CV</a
 										>
 									</div>
@@ -1321,9 +1323,20 @@
 		<script src="js/mixitup.js"></script>
 
 		<script>
-			// $("a").click(function (e) {
-			// 	e.preventDefault();
-			// });
+			$(document).ready(function () {
+				$(".navbar li a").click(function (e) {
+					var targetHref = $(this).attr("href");
+
+					$("html, body").animate(
+						{
+							scrollTop: $(targetHref).offset().top,
+						},
+						500
+					);
+
+					e.preventDefault();
+				});
+			});
 
 			// calling mixitup
 			var mixer = mixitup(".portfolio");
